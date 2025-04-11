@@ -1,0 +1,966 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: none;
+}
+* {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for property changes */
+    box-sizing: border-box; /* Consistent box model */
+  }
+
+
+
+/* Preloader container */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Background for the preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the preloader is on top */
+}
+
+/* Preloader logo animation */
+#preloader-logo {
+    width: 150px;
+    height: auto;
+    animation: spin 2s linear infinite; /* Spinning effect */
+}
+
+/* Keyframe for spinning effect */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main content fade-in */
+#main-content {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* navbar */
+#navbar{
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#navbar h1{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    position: absolute;
+    margin-top: -30px; 
+}
+.ullength{
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+nav ul a:hover{
+    color: #c30302;
+    font-size: 25px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    gap: 50px;   
+}
+
+
+
+
+
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    margin: 20px 0;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+  }
+  
+  .sub-links {
+    position: relative; 
+    display: none; /* Hidden by default */
+    flex-direction: column;
+   
+    z-index: 10;
+    text-decoration: none;
+}
+.sub-links a {
+    background-color: rgb(37, 34, 34);
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+li:hover .sub-links {
+    display: flex; /* Show sub-links on hover */
+}
+
+
+
+.aboutus{
+    position: relative;
+}
+/* Header Text */
+.aboutus h2 {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    margin-top: 160px;
+    margin-left: 300px;
+    
+    z-index: 2;
+    opacity: 0; /* Initially hidden */
+    animation: fallText 1.5s ease-out forwards; /* Falling animation */
+}
+
+/* Black line */
+.blackline {
+    height: 400px;
+    margin-left: 100px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+.blackline1 {
+    height: 400px;
+    margin-left: 100px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+
+
+/* Keyframes for falling text */
+@keyframes fallText {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start above the final position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+/* Keyframes for falling line */
+@keyframes fallLine {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start above the final position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+     
+    
+}
+
+.black1{
+    margin-top: 50px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: 500px;
+    height: 350px;
+    background-image: url(./assets/black\ background.png);
+    background-position: center;
+    background-size: cover; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.black1:hover {
+  transform: translateY(-10px);
+  
+}
+    
+   
+
+.black1 h1{
+    color: #c30302;
+    margin-top: 110px;
+}
+.time{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    
+}
+.form a{
+    text-decoration: dashed;
+}
+
+
+.form{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.form:hover {
+  transform: translateY(-10px);
+  
+}
+
+.formtxt{
+    display: flex;
+    gap: 20px;
+    
+    align-items: center;
+    justify-content: center;
+}
+#formtxt{
+    height: 70px;
+
+}
+    
+    
+.bob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+.bob .container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.bob h1 {
+    color: #333;
+}
+.bob p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.bob .button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4285F4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.bob .button:hover {
+    background-color: #357ae8;
+} 
+
+.addform{
+    background-color: #c30302;
+    padding: 1%;
+    border-radius: 25px;
+    color: white;
+    width: 500px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1); /* Subtle shadow */
+    
+}
+.pdf{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+#pdf{
+    background-color: #c30302;
+    color: aliceblue;
+    padding: 30px;
+    border-radius: 40px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#pdf:hover {
+  transform: translateY(-10px);
+  
+}
+   
+
+#pdflogo{
+    height: 70px;
+    margin-left: 20px;
+}
+
+#footer{
+    margin-top: 120px;
+    width: 100%;
+    height: 600px;
+    background-image: url(./assets/footer\ pic.png);
+    background-size: cover;
+    display: flex;
+}
+#footerlogo{
+    height: 200px;
+    margin-left: 100px;
+    margin-top: 300px;
+    border-radius: 50%;
+}
+.footername{
+    color: white;
+    font-size: 30px;
+    margin-top: 380px;
+    margin-left: 5px;
+    
+}
+.footerdetails{
+    margin: 100px;
+    width: 1000px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    color: white;
+    margin-top: 280px;
+}
+.add{
+    height: 100px;
+    border-radius: 25px;
+}
+.footeradd{
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+ 
+}
+
+.follow{
+    text-align: center;
+    font-size: 30px ;
+}
+.followul{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.followul li{
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation{
+    font-size: 30px;
+}
+.nav2{
+    font-size: 20px;
+}
+.nav2 li{
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+ 
+}
+.copyrights{
+    color: white;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 0%;
+    margin-top: 0%;
+
+}
+
+
+/* admission.css animation styles */
+
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Optional: bounce for buttons or hover zoom */
+  .card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+
+@media (min-width: 576px) and (max-width: 1380px) {
+    /* navbar */
+
+    
+    .sub-links{
+        font-size: 15px;
+
+    }
+    nav ul a:hover{
+        color: #c30302;
+        font-size: 22px;
+        
+    }
+    nav ul{
+        gap: 30px;   
+    }
+   
+     .aboutus{
+        position: relative;
+        
+    }
+    /* Header Text */
+    .aboutus h2 {
+        font-size: 30px;
+        position: absolute;
+        color: white;
+        margin-top: 115px;
+        margin-left: 150px;
+        
+        z-index: 2;
+        opacity: 0; /* Initially hidden */
+        animation: fallText 1.5s ease-out forwards; /* Falling animation */
+    }
+    
+    /* Black line */
+    .blackline {
+        height: 300px;
+        margin-left: 20px;
+        opacity: 0; /* Initially hidden */
+        animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+    }
+    .blackline1 {
+        height: 300px;
+        margin-left: 00px;
+        opacity: 0; /* Initially hidden */
+        animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+    }
+    
+    
+    .box1{
+        display: flex;
+        justify-content: center;
+        margin-top: -100px;
+        gap: 0px;
+         
+        
+    }
+    
+    .black1{
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        width: 400px;
+        height: 250px;
+        background-image: url(./assets/black\ background.png);
+        background-position: center;
+        background-size: cover;
+        
+       
+    }
+    .black1 h1{
+        color: #c30302;
+        margin-top: 110px;
+        font-size: 24px;
+    }
+    .time{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        
+    }
+    .form a{
+        text-decoration: dashed;
+    }
+    
+    
+    .form{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        
+        
+    }
+    .addform{
+        background-color: #c30302;
+        padding: 1%;
+        border-radius: 25px;
+        color: white;
+        width: 500px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 1); /* Subtle shadow */
+        
+    }
+    #pdf h3{
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
+    #pdflogo{
+        margin-left: 0px;
+    }
+    #pdf{
+        width: 500px;
+    }
+    
+     
+     
+    
+    /* footer*/
+    
+     #footerlogo{
+         height: 100px;
+         margin-top: 150px;
+     }
+     .footername{
+         font-size: 20px;
+         margin-top: 190px;
+        
+         
+     }
+     .footerdetails{
+         margin-left: -150px;
+         display: flex;
+        justify-content: center;
+        gap: 0;
+        gap: 30px;
+     }
+     .add{
+         height: 80px;
+         width: 100px; 
+     }
+     .footeradd{
+         font-size: 20px;
+     }
+     .follow{
+         font-size: 20px; 
+     }
+     .followul{
+         font-size: 15px;
+     }
+     .navigation{
+         font-size: 20px;
+       
+     }
+     .nav2 li{
+         font-size: 15px;
+     }
+     .copyrights{
+         font-size: 15px;
+         margin-top: -50px;
+        
+     }
+       
+
+}
+@media (max-width: 575px){
+    .sub-links{
+        font-size: 12px;
+
+    }
+    nav ul a:hover{
+        color: #c30302;
+        font-size: 21px;
+        
+    }
+   /* navbar */
+   nav ul{
+    gap: 20px;
+    margin-left: -20px;   
+}
+.aboutus{
+    position: relative;
+    
+}
+/* Header Text */
+.aboutus h2 {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    margin-top: 115px;
+    margin-left: 150px;
+    
+    z-index: 2;
+    opacity: 0; /* Initially hidden */
+    animation: fallText 1.5s ease-out forwards; /* Falling animation */
+}
+
+/* Black line */
+.blackline {
+    height: 300px;
+    margin-left: 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+.blackline1 {
+    height: 300px;
+    margin-left: 00px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+
+
+.box1{
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    gap: 0px;
+     
+    
+}
+
+.black1{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 400px;
+    height: 250px;
+    background-image: url(./assets/black\ background.png);
+    background-position: center;
+    background-size: cover;
+    
+   
+}
+.black1 h1{
+    color: #c30302;
+    margin-top: 110px;
+    font-size: 24px;
+}
+.time{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+.form a{
+    text-decoration: dashed;
+}
+
+
+.form{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    
+    
+}
+.addform{
+    background-color: #c30302;
+    padding: 1%;
+    border-radius: 25px;
+    color: white;
+    width: 500px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1); /* Subtle shadow */
+
+}
+#pdf h3{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+#pdflogo{
+    margin-left: 5px;
+}
+#pdf{
+    width: 400px;
+}
+/* footer*/
+
+ #footerlogo{
+     height: 80px;
+     margin-top: 150px;
+ }
+ .footername{
+     font-size: 15px;
+     margin-top: 175px;
+     
+ }
+ .footerdetails{
+     margin-left: -180px;
+     display: flex;
+    justify-content: center;
+    gap: 0;
+    gap: 30px;
+ }
+ .add{
+     height: 80px;
+     width: 100px; 
+ }
+ .footeradd{
+     font-size: 20px;
+ }
+ .follow{
+     font-size: 20px; 
+ }
+ .followul{
+     font-size: 15px;
+ }
+ .navigation{
+     font-size: 20px;
+   
+ }
+ .nav2 li{
+     font-size: 15px;
+ }
+ .copyrights{
+     font-size: 10px;
+     margin-top: 0px;
+    
+ }
+ #footer{
+     height: 500px;  
+ }
+}
+@media (max-width: 480px){
+    .sub-links{
+        font-size: 11px;
+
+    }
+    nav ul a:hover{
+        color: #c30302;
+        font-size: 15px;
+        
+    }
+    
+    
+   /* navbar */
+   nav ul{
+    font-size: 17px;
+    gap: 20px;
+    margin-left: 5px;
+     
+}
+nav ul a:hover{
+    font-size: 20px;
+  }
+.aboutus{
+    position: relative;
+    
+}
+/* Header Text */
+.aboutus h2 {
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    margin-top: 55px;
+    margin-left: 90px;
+    z-index: 2;
+    opacity: 0; /* Initially hidden */
+    animation: fallText 1.5s ease-out forwards; /* Falling animation */
+}
+
+/* Black line */
+.blackline {
+    height: 220px;
+    margin-top: -30px;
+    margin-left: 0px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+.blackline1 {
+    height: 220px;
+    margin-left: 0px;
+    opacity: 0; /* Initially hidden */
+    animation: fallLine 1.5s ease-out 0.5s forwards; /* Falling animation with delay */
+}
+.aboutust h2{
+    margin-top: 85px;
+    margin-left: 120px;
+}
+
+
+.box1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -10px;
+    gap: -50px;
+     
+    
+}
+
+.black1{
+    margin-top: -60px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 350px;
+    height: 250px;
+    background-image: url(./assets/black\ background.png);
+    background-position: center;
+    background-size: cover;
+    
+   
+}
+.black1 h1{
+    color: #c30302;
+    margin-top: 90px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.time{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    
+}
+.form a{
+    text-decoration: dashed;
+}
+
+
+.form{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+.addform{
+    background-color: #c30302;
+    padding: 1%;
+    border-radius: 25px;
+    color: white;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1); /* Subtle shadow */
+    
+}
+#pdf h3{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+#pdflogo{
+    margin-left: 0px;
+}
+#pdf{
+    width: 300px;
+    margin-top: 20px;
+}
+
+ 
+ 
+ 
+/* footer*/
+
+ #footerlogo{
+     height: 60px;
+     margin-top: 100px;
+     margin-left: 120px;
+ }
+ .footername{
+     font-size: 15px;
+     margin-top: 120px;
+     
+ }
+ .footerdetails{
+     margin-left: -210px;
+     display: flex;
+    justify-content: center;
+    gap: 0;
+    gap: 30px;
+    margin-top: 200px;
+ }
+ .add{
+     height: 80px;
+     width: 100px; 
+ }
+ .footeradd{
+     font-size: 20px;
+ }
+ .follow{
+     font-size: 18px; 
+ }
+ .followul{
+     font-size: 15px;
+     line-height: 0.2;
+ }
+ .navigation{
+     font-size: 20px;
+   
+ }
+ .nav2 li{
+     font-size: 15px;
+     line-height: 0.2;
+ }
+ .copyrights{
+     font-size: 10px;
+     margin-top: 0px;
+ }
+ #footer{
+     height: 400px;  
+ }
+   
+}
+
