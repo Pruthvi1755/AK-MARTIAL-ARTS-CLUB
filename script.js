@@ -236,3 +236,31 @@ window.addEventListener('load', animateOnScroll);
     elementsToAnimate.forEach((el) => observer.observe(el));
   });
 
+
+
+
+
+  const mainLinks = document.querySelectorAll('.main-link');
+
+  mainLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // prevent # jump
+      event.stopPropagation(); // stop click from reaching document
+
+      // First close all sub-links
+      document.querySelectorAll('.sub-links').forEach(sub => {
+        sub.style.display = 'none';
+      });
+
+      // Then open only the clicked one
+      const subLinks = this.nextElementSibling;
+      subLinks.style.display = 'block';
+    });
+  });
+
+  // Listen for clicks anywhere in document
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.sub-links').forEach(sub => {
+      sub.style.display = 'none';
+    });
+  });
